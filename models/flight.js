@@ -21,7 +21,10 @@ const flightSchema = new Schema({
     },
     departs: {
         type: Date, 
-        default: } 
+        default: function() {
+            return new Date();
+        }
+    } 
 }, {
     timestamps: true
 });
